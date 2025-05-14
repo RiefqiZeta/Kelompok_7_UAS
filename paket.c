@@ -64,7 +64,7 @@ void pesanPaket() {
     fgets(pengirim, sizeof(pengirim), stdin);
     pengirim[strcspn(pengirim, "\n")] = '\0';
     if (strlen(pengirim) == 0) {
-        printf("⚠️  Nama pengirim tidak boleh kosong.\n");
+        printf("Nama pengirim tidak boleh kosong.\n");
         return;
     }
 
@@ -72,7 +72,7 @@ void pesanPaket() {
     fgets(telepon_pengirim, sizeof(telepon_pengirim), stdin);
     telepon_pengirim[strcspn(telepon_pengirim, "\n")] = '\0';
     if (strlen(telepon_pengirim) == 0) {
-        printf("⚠️  Nomor telepon pengirim tidak boleh kosong.\n");
+        printf("Nomor telepon pengirim tidak boleh kosong.\n");
         return;
     }
 
@@ -80,7 +80,7 @@ void pesanPaket() {
     fgets(penerima, sizeof(penerima), stdin);
     penerima[strcspn(penerima, "\n")] = '\0';
     if (strlen(penerima) == 0) {
-        printf("⚠️  Nama penerima tidak boleh kosong.\n");
+        printf("Nama penerima tidak boleh kosong.\n");
         return;
     }
 
@@ -88,20 +88,20 @@ void pesanPaket() {
     fgets(telepon_penerima, sizeof(telepon_penerima), stdin);
     telepon_penerima[strcspn(telepon_penerima, "\n")] = '\0';
     if (strlen(telepon_penerima) == 0) {
-        printf("⚠️  Nomor telepon penerima tidak boleh kosong.\n");
+        printf("Nomor telepon penerima tidak boleh kosong.\n");
         return;
     }
 
     printf("Masukkan provinsi pengirim (kode provinsi)  : ");
     if (scanf("%d", &provinsi_asal) != 1 || provinsi_asal < 1 || provinsi_asal > MAX_PROVINSI) {
-        printf("⚠️  Kode provinsi pengirim tidak valid.\n");
+        printf("Kode provinsi pengirim tidak valid.\n");
         while (getchar() != '\n');
         return;
     }
 
     printf("Masukkan provinsi penerima (kode provinsi)  : ");
     if (scanf("%d", &provinsi_tujuan) != 1 || provinsi_tujuan < 1 || provinsi_tujuan > MAX_PROVINSI) {
-        printf("⚠️  Kode provinsi penerima tidak valid.\n");
+        printf("Kode provinsi penerima tidak valid.\n");
         while (getchar() != '\n');
         return;
     }
@@ -112,7 +112,7 @@ void pesanPaket() {
     fgets(alamat, sizeof(alamat), stdin);
     alamat[strcspn(alamat, "\n")] = '\0';
     if (strlen(alamat) == 0) {
-        printf("⚠️  Alamat tujuan tidak boleh kosong.\n");
+        printf("Alamat tujuan tidak boleh kosong.\n");
         return;
     }
 
@@ -120,7 +120,7 @@ void pesanPaket() {
     fgets(berat, sizeof(berat), stdin);
     berat[strcspn(berat, "\n")] = '\0';
     if (strlen(berat) == 0 || atof(berat) <= 0) {
-        printf("⚠️  Berat paket harus angka dan lebih dari 0.\n");
+        printf("Berat paket harus angka dan lebih dari 0.\n");
         return;
     }
 
@@ -129,7 +129,7 @@ void pesanPaket() {
     tambahKeLinkedList(paket);
     tambahKeQueue(paket);
 
-    printf("\n✅ Paket berhasil dipesan!\nKode Pelacakan Anda: %s\n", paket->kode);
+    printf("\nPaket berhasil dipesan!\nKode Pelacakan Anda: %s\n", paket->kode);
 }
 
 void lacakPaket() {
@@ -139,13 +139,13 @@ void lacakPaket() {
     fgets(kode, sizeof(kode), stdin);
     kode[strcspn(kode, "\n")] = '\0';
     if (strlen(kode) == 0) {
-        printf("⚠️  Kode pelacakan tidak boleh kosong.\n");
+        printf("Kode pelacakan tidak boleh kosong.\n");
         return;
     }
 
     Paket *p = cariPaket(kode);
     if (p == NULL) {
-        printf("⚠️  Paket dengan kode '%s' tidak ditemukan.\n", kode);
+        printf("Paket dengan kode '%s' tidak ditemukan.\n", kode);
         return;
     }
 
