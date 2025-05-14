@@ -16,7 +16,7 @@ void menuUtama() {
         pilihan[strcspn(pilihan, "\n")] = '\0';
 
         if (strlen(pilihan) != 1 || pilihan[0] < '1' || pilihan[0] > '4') {
-            printf("⚠️  Pilihan tidak valid! Silakan masukkan angka 1 - 4.\n");
+            printf("Pilihan tidak valid! Silakan masukkan angka 1 - 4.\n");
             continue;
         }
 
