@@ -145,7 +145,7 @@ make clean
 ## Tim Pengembang
 
 Kelompok 7 Praktikum Struktur Data dan Algoritma:
-- Abdan Syakura Bin Yasir (2408107010014) - Modul pelacakan & penyimpanan file
-- Dara Ramadhani (2408107010028) - Desain alur sistem & dokumentasi
-- Muhammad Riyadh (2408107010015) - Pengelolaan fitur admin & pengujian algoritma
-- Teuku Riefqi Zeta (2408107010071) - Modul pemesanan & integrasi kode pelacakan
+- Abdan Syakura Bin Yasir (2408107010014)
+- Dara Ramadhani (2408107010028)
+- Muhammad Riyadh (2408107010015)
+- Teuku Riefqi Zeta (2408107010071)
