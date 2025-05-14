@@ -16,10 +16,10 @@ int adminLogin() {
 
 void loginAdmin() {
     if (!adminLogin()) {
-        printf("⚠️  Login gagal!\n");
+        printf("Login gagal!\n");
         return;
     }
-    printf("✅ Login berhasil!\n");
+    printf("Login berhasil!\n");
 
     char pilihan[10]; // Buffer input aman
     do {
@@ -34,7 +34,7 @@ void loginAdmin() {
         pilihan[strcspn(pilihan, "\n")] = '\0';       // Hapus newline
 
         if (strlen(pilihan) != 1 || pilihan[0] < '1' || pilihan[0] > '4') {
-            printf("⚠️  Pilihan tidak valid! Masukkan angka 1 - 4.\n");
+            printf("Pilihan tidak valid! Masukkan angka 1 - 4.\n");
             continue;
         }
 
