@@ -64,7 +64,7 @@ void tampilkanPaketTerurut() {
     pilihan[strcspn(pilihan, "\n")] = '\0';
 
     if (strlen(pilihan) != 1 || pilihan[0] < '1' || pilihan[0] > '6') {
-        printf("⚠️  Pilihan tidak valid!\n");
+        printf("Pilihan tidak valid!\n");
         free(array);
         return;
     }
