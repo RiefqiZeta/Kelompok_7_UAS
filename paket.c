@@ -166,7 +166,7 @@ void lacakPaket() {
     }
     for (int i = 0; i < 3; i++) {
         if (p->status >= i) {
-            printf("[✅] %s\n", statusList[i]);
+            printf("[v] %s\n", statusList[i]);
         } else {
             printf("[ ] %s\n", statusList[i]);
         }
@@ -213,7 +213,7 @@ void lihatAntrian() {
     }
     while (curr != NULL) {
         Paket *p = curr->paket;
-        printf("- %s | %s | %s ➝ %s | Status: ",
+        printf("- %s | %s | %s -> %s | Status: ",
             p->kode, p->pengirim, p->provinsi_asal, p->provinsi_tujuan);
         if (p->status == -1)
             printf("Belum dikirim\n");
